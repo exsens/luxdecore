@@ -74,6 +74,7 @@ h3,
 h4,
 h5,
 h6,
+figure,
 p {
   margin: 0;
   padding: 0;
@@ -92,6 +93,7 @@ body {
 
 body.lock {
   overflow-y: hidden;
+  height: 100vh;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -327,6 +329,110 @@ body.lock {
   max-width: 165px;
   width: 100%;
   min-height: 52px;
+}
+
+.mailing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 110px;
+  background-color: #00b5ab;
+  position: relative;
+  overflow: hidden;
+}
+
+.no-webp .mailing::before {
+  background-image: url(../images/mailling/mail.png); }
+
+.mailing::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(-3%, -9%);
+      -ms-transform: translate(-3%, -9%);
+          transform: translate(-3%, -9%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 153px;
+  height: 135px;
+}
+
+.mailing label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fefefe;
+  text-transform: uppercase;
+  padding-right: 10px;
+}
+
+.mailing__box {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 460px;
+          flex: 0 1 460px;
+  position: relative;
+}
+
+.mailing input {
+  display: block;
+  width: 100%;
+  padding: 8px 60px 8px 10px;
+  border: 1px solid #A3E5E1;
+  background-color: #66d3cd;
+  position: relative;
+  color: #fefefe;
+}
+
+.mailing input::-webkit-input-placeholder {
+  color: #fefefe;
+  font-size: 14px;
+}
+
+.mailing input::-moz-placeholder {
+  color: #fefefe;
+  font-size: 14px;
+}
+
+.mailing input:-ms-input-placeholder {
+  color: #fefefe;
+  font-size: 14px;
+}
+
+.mailing input::-ms-input-placeholder {
+  color: #fefefe;
+  font-size: 14px;
+}
+
+.mailing input::placeholder {
+  color: #fefefe;
+  font-size: 14px;
+}
+
+.mailing button {
+  width: 58px;
+  height: 38px;
+  position: absolute;
+  right: -4px;
+  top: -2px;
+  overflow: hidden;
+}
+
+.mailing button:hover svg {
+  fill: #e78216;
+}
+
+.mailing button svg {
+  fill: #d9f4f3;
+  -webkit-transition: fill .2s;
+  -o-transition: fill .2s;
+  transition: fill .2s;
 }
 
 .scroll__inner {
@@ -751,6 +857,10 @@ body.lock {
   background-color: #e78216;
   cursor: pointer;
   position: relative;
+}
+
+.catalog:focus {
+  border: 1px red solid;
 }
 
 .catalog__title {
@@ -1248,6 +1358,7 @@ body.lock {
   top: 0;
   left: 0;
   z-index: 0;
+  visibility: hidden;
 }
 
 .main-slider {
@@ -1708,110 +1819,6 @@ body.lock {
   overflow: hidden;
 }
 
-.mailing {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 20px 110px;
-  background-color: #00b5ab;
-  position: relative;
-  overflow: hidden;
-}
-
-.no-webp .mailing::before {
-  background-image: url(../images/mailling/mail.png); }
-
-.mailing::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-transform: translate(-3%, -9%);
-      -ms-transform: translate(-3%, -9%);
-          transform: translate(-3%, -9%);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 153px;
-  height: 135px;
-}
-
-.mailing label {
-  font-size: 16px;
-  font-weight: 500;
-  color: #fefefe;
-  text-transform: uppercase;
-  padding-right: 10px;
-}
-
-.mailing__box {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 460px;
-          flex: 0 1 460px;
-  position: relative;
-}
-
-.mailing input {
-  display: block;
-  width: 100%;
-  padding: 8px 60px 8px 10px;
-  border: 1px solid #A3E5E1;
-  background-color: #66d3cd;
-  position: relative;
-  color: #fefefe;
-}
-
-.mailing input::-webkit-input-placeholder {
-  color: #fefefe;
-  font-size: 14px;
-}
-
-.mailing input::-moz-placeholder {
-  color: #fefefe;
-  font-size: 14px;
-}
-
-.mailing input:-ms-input-placeholder {
-  color: #fefefe;
-  font-size: 14px;
-}
-
-.mailing input::-ms-input-placeholder {
-  color: #fefefe;
-  font-size: 14px;
-}
-
-.mailing input::placeholder {
-  color: #fefefe;
-  font-size: 14px;
-}
-
-.mailing button {
-  width: 58px;
-  height: 38px;
-  position: absolute;
-  right: -4px;
-  top: -2px;
-  overflow: hidden;
-}
-
-.mailing button:hover svg {
-  fill: #e78216;
-}
-
-.mailing button svg {
-  fill: #d9f4f3;
-  -webkit-transition: fill .2s;
-  -o-transition: fill .2s;
-  transition: fill .2s;
-}
-
 .video-slider {
   margin-bottom: 40px;
 }
@@ -1974,12 +1981,19 @@ body.lock {
   font-weight: 500;
   line-height: 1.625;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   max-width: 250px;
 }
 
 .footer-form {
   overflow: hidden;
+}
+
+.footer-form label {
+  display: block;
+}
+
+.footer-form__box {
   position: relative;
 }
 
@@ -2041,6 +2055,9 @@ body.lock {
 
 .footer-form button svg {
   fill: #8C8A89;
+  -webkit-transition: fill .3s linear;
+  -o-transition: fill .3s linear;
+  transition: fill .3s linear;
 }
 
 .footer-form button svg path {
@@ -2048,12 +2065,15 @@ body.lock {
   height: 21px;
 }
 
-.footer-catalog {
-  display: inline-block;
+.footer-form button svg:hover {
+  fill: #e78216;
 }
 
-.footer-catalog:not(:last-child) {
-  margin-right: 40px;
+.footer-catalog {
+  display: inline-block;
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;
 }
 
 .footer-catalog__item:not(:last-child) {
@@ -2382,6 +2402,10 @@ body.lock {
 }
 
 @media (max-width: 865px) {
+  .footer-top__col:not(:last-child) {
+    padding-right: 20px;
+  }
+
   .footer-top__col--col2 {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
@@ -2402,6 +2426,12 @@ body.lock {
 
   .footer-top {
     padding: 15px 0;
+  }
+
+  .footer-top__row {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 
@@ -2581,6 +2611,10 @@ body.lock {
 }
 
 @media (max-width: 605px) {
+  .footer-top__col:not(:last-child) {
+    padding-right: 0px;
+  }
+
   .footer-top__col--col2 {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
@@ -2869,20 +2903,21 @@ body.lock {
 
   .footer-title {
     max-width: 100%;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
   }
 
   .footer-catalog {
-    display: block;
-  }
-
-  .footer-catalog:not(:last-child) {
-    margin-bottom: 7px;
-    margin-right: 0;
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
   }
 
   .footer-catalog__item:not(:last-child) {
     margin-bottom: 7px;
+  }
+
+  .footer-catalog__link {
+    font-size: 16px;
   }
 }
 
